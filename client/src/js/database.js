@@ -22,7 +22,7 @@ const initdb = async () =>
     console.log('Data saved to the database', result);
   };
 
-export const getOneDb = async (id) => {
+export const getDb = async (id) => {
   console.log('GET from the database');
   const todosDb = await openDB('todos', 1);
   const tx = todosDb.transaction('todos', 'readonly');
